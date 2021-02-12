@@ -1,0 +1,27 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: antiquewhite;
+
+    height: 200px;
+
+    margin-top: 300px;
+
+}
+
+.login input{
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    margin: 10px;
+}
+
+
