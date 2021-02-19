@@ -36,18 +36,59 @@
   color: white;
 
   font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
 
   margin-botton: 20px;
+  outline: none;
+}
+
+.login button::after {
+  position: fixed;
+  content: "";
+  background: white;
+  width: 250px;
+  height: 1px;
+  transform: translate(-140px, 33px);
+  z-index: 1;
+  transition: 200ms;
+  transition-timing-function: cubic-bezier(0.83, -0.56, 0.1, 1.51);
+}
+
+.login button:hover::after {
+  position: fixed;
+  content: "";
+  background: #9c9c9c;
+  width: 250px;
+  height: 10px;
+  transform: translate(-140px, 25px);
+  z-index: 1;
 }
 
 .noerror{
   display: none;
+  padding: 5px;
 }
 
 .error{
+  padding: 5px;
   text-align: center;
-  color: red;
+  background-color: #b53636;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+
+  animation-name: error;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+
+}
+
+@keyframes error{
+  from{ background-color: white; 
+        transform: translate(0px, 20px)    
+    }
+  to{ background-color: #b53636; }
 }
 
 

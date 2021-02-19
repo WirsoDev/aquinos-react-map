@@ -1,6 +1,6 @@
 import Login from './components/Login'
 import env from "react-dotenv"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './styles/app.css'
 import './styles/login.css'
 
@@ -17,12 +17,16 @@ const App = () =>{
     if(code === env.CODE){
       setIsValid(true)
     }else{
-      setCode('')
       setError(true)
     }
   }
-  if(!isValid){
 
+  useEffect(() => {
+    
+    setError(false)
+  },[code])
+
+  if(!isValid){
     return(
       <div class="app">
         <Login 
