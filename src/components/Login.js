@@ -1,20 +1,19 @@
 import '../styles/login.css'
-import { useState } from 'react'
+
 
 const Login = ( props ) => {
 
     return(
         <div className="login">
             <form onSubmit={props.onSubmit}>
-                <h1>Enter code:</h1>
                 <input 
                 type="password" 
                 value={props.value} 
-                placeholder='your code here'
+                placeholder='Password'
                 onChange={props.onChange}
                 />
-                <button>submit</button>
-                <p>{props.errorMessage}</p>
+                <button>GO</button>
+                <p className={props.classname}>Wrong password!</p>
             </form>
         </div>
     )

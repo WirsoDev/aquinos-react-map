@@ -1,21 +1,24 @@
 import Login from './components/Login'
 import env from "react-dotenv"
 import { useState } from 'react'
+import './styles/app.css'
+import './styles/login.css'
+
 
 const App = () =>{
   
   const [code, setCode] = useState('')
   const [isValid, setIsValid] = useState(false)
-  const [logerror, setLogError] = useState(false)
+  const [ error, setError ] = useState(false)
 
   function checkCode(e){
     e.preventDefault()
     
-    if(code == env.CODE){
+    if(code === env.CODE){
       setIsValid(true)
     }else{
-      setLogError(true)
       setCode('')
+      setError(true)
     }
   }
   if(!isValid){
@@ -26,7 +29,7 @@ const App = () =>{
           onSubmit={checkCode}
           value={code}
           onChange={(e) => setCode(e.target.value)}
-          errorMessage={ logerror ? 'NOP' : ''}
+          classname={ error ? 'error' : 'noerror' } 
         /> 
       </div>
      )

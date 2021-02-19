@@ -1,27 +1,54 @@
 .login{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    justify-content: center;
-    align-items: center;
 
+.login form{
+  display: flex;
+  flex-direction: column;
 
-    background-color: grey;
-
-    height: 200px;
-
-    margin-top: 300px;
-
+  width: 250px;
 }
 
 .login input{
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 
-    border: none;
-    border-radius: 5px;
+  border: none;
+  outline: none;
 
-    margin: 10px;
+  border-bottom: 2px solid #bfbfbf;
+
+  margin-bottom: 5px;
+
+  font-size: 20px;
+  color: #bfbfbf;
 }
+
+.login button{
+  padding: 10px;
+  border: none;
+  background-color: #bfbfbf;
+
+  color: white;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  margin-botton: 20px;
+}
+
+.noerror{
+  display: none;
+}
+
+.error{
+  text-align: center;
+  color: red;
+}
+
 
 
