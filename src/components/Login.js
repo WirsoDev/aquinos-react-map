@@ -6,7 +6,7 @@ const Login = ( props ) => {
     return(
         <div className="login">
             <form onSubmit={props.onSubmit}>
-                <input 
+                <input
                 type="password" 
                 value={props.value} 
                 placeholder='Password'

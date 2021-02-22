@@ -37,6 +37,8 @@
     ]
   },
   "react-dotenv": {
-    "whitelist": ["CODE"]
+    "whitelist": [
+      "CODE"
+    ]
   }
 }

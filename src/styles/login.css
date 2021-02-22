@@ -1,5 +1,4 @@
 .login{
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,8 +8,7 @@
 .login form{
   display: flex;
   flex-direction: column;
-
-  width: 250px;
+  width: 400px;
 }
 
 .login input{
@@ -24,46 +22,48 @@
 
   margin-bottom: 5px;
 
-  font-size: 20px;
+  font-size: 30px;
   color: #bfbfbf;
 }
 
 .login button{
-  padding: 10px;
+  padding: 20px;
   border: none;
   background-color: #bfbfbf;
-
   color: white;
-
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   cursor: pointer;
-
-  margin-botton: 20px;
   outline: none;
+  transition: 200ms;
+  transition-timing-function: cubic-bezier(0.83, -0.56, 0.1, 1.51);
 }
 
 .login button::after {
   position: fixed;
   content: "";
   background: white;
-  width: 250px;
+  width: 400px;
   height: 1px;
-  transform: translate(-140px, 33px);
+  transform: translate(-219px, 50px);
   z-index: 1;
   transition: 200ms;
   transition-timing-function: cubic-bezier(0.83, -0.56, 0.1, 1.51);
+
+  opacity: 0;
 }
 
 .login button:hover::after {
   position: fixed;
   content: "";
-  background: #9c9c9c;
-  width: 250px;
-  height: 10px;
-  transform: translate(-140px, 25px);
+  background: #5c5c5c;
+  width: 400px;
+  height: 19px;
+  transform: translate(-219px, 30px);
   z-index: 1;
+  opacity: 1;
 }
+
 
 .noerror{
   display: none;
@@ -71,15 +71,14 @@
 }
 
 .error{
-  padding: 5px;
+  padding: 10px;
   text-align: center;
-  background-color: #b53636;
-  font-size: 11px;
-  font-weight: bold;
+  background-color: #e45959;
+  font-size: 20px;
   color: white;
 
   animation-name: error;
-  animation-duration: 300ms;
+  animation-duration: 250ms;
   animation-timing-function: ease-in-out;
 
 }
