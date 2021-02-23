@@ -1,4 +1,5 @@
 import Login from './components/Login'
+import RenderMap from './components/Maps'
 import env from "react-dotenv"
 import { useState, useEffect } from 'react'
 import './styles/app.css'
@@ -39,7 +40,7 @@ const App = () =>{
      )
   }else{
     return(
-      <h1>You are in!</h1>
+      <RenderMap />
     )
   }
 }
