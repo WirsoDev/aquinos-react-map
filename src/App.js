@@ -16,7 +16,7 @@ const App = () =>{
   function checkCode(e){
     e.preventDefault()
     
-    if(code === 'a'){
+    if(code === env.CODE){
       setIsValid(true)
     }else{
       setError(true)
