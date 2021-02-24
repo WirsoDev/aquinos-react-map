@@ -1,7 +1,8 @@
 import Login from './components/Login'
-import RenderMap from './components/Maps'
-import env from "react-dotenv"
 import { useState, useEffect } from 'react'
+import RenderMap from './components/Maps'
+import Test from './components/Teste'
+import env from "react-dotenv"
 import './styles/app.css'
 import './styles/login.css'
 
@@ -15,7 +16,7 @@ const App = () =>{
   function checkCode(e){
     e.preventDefault()
     
-    if(code === env.CODE){
+    if(code === 'a'){
       setIsValid(true)
     }else{
       setError(true)
