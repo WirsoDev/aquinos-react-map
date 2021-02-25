@@ -1,7 +1,6 @@
 import Login from './components/Login'
 import { useState, useEffect } from 'react'
-import RenderMap from './components/Maps'
-import Test from './components/Teste'
+import RenderMap from './components/RenderMap'
 import env from "react-dotenv"
 import './styles/app.css'
 import './styles/login.css'
@@ -41,7 +40,7 @@ const App = () =>{
      )
   }else{
     return(
-      <RenderMap />
+        <RenderMap />
     )
   }
 }

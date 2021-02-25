@@ -1,30 +1,17 @@
-import {React, useEffect, useState} from 'react'
+import {React, useEffect, useState, createContext, useContext} from 'react'
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps'
-import { GoogleSpreadsheet } from 'google-spreadsheet'
-import env from "react-dotenv"
+import getDoc from '../scripts/getDocSheets'
+
 import '../styles/map.css'
+
 import mapStyles from '../mapStyles'
 import phoneIcon from '../icons/phone.svg'
 import desktopIcon from '../icons/Desktop.svg'
 
 
-const getDoc = async () => {
-    const doc = new GoogleSpreadsheet(env.SHEET_ID);
-    
-    await doc.useServiceAccountAuth({
-        client_email: env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-        private_key: env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n')
-    })
-    await doc.loadInfo();
-    return doc;
-}
-
- 
 function Map(){
-
     const [locations, setLocations] = useState([])
     const [selected, setSelected] = useState()
-    const [isLoading, setIsloading] = useState(true)
 
     useEffect(()=>{
         let sheet;
@@ -39,7 +26,7 @@ function Map(){
         })
     },[])
 
-    // debug!
+    // set obj selected!
     function clickHandler(obj){
        setSelected(obj)
     }
@@ -48,7 +35,6 @@ function Map(){
         styles: mapStyles,
         disableDefaultUI: true,
     }
-
     return(
         <div className="rapper">
             <GoogleMap 
@@ -84,19 +70,6 @@ function Map(){
 const WrappedMap = withScriptjs(withGoogleMap(Map))
 
 
-function RenderMap() {
-    return(
-        <div className="map">
-            <WrappedMap 
-            googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${env.API_KEY}`}
-            loadingElement={<div style={{ height: '100%' }} />}
-            containerElement={<div style={{ height: '100%' }} />}
-            mapElement={<div style={{ height: '100%' }} />}
-        />
-        </div>
-    )
-}
-
-export default RenderMap
+export default WrappedMap
 
 

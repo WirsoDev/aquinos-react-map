@@ -2,3 +2,66 @@
     width: 100vw;
     height: 100vh;
 }
+
+.header{
+    position: fixed;
+    z-index: 99;
+    padding: 20px;
+    width: 90px;
+
+    background-color: rgba(206, 206, 206, 0.5);
+    margin: 10px;
+
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'gilroy-bold';
+}
+
+.header-title span{
+    font-family: 'gilroy-bold';
+    line-height: 16px;
+    color: white;
+    font-size: 30px;
+}
+
+.header p{
+    font-family: 'gilroy-bold';
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header h2{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.header h2 span{
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.header img{
+    height: 40px;
+    margin-top: 20px;
+    text-align: center;
+    
+}
