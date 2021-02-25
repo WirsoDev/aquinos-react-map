@@ -58,7 +58,7 @@ function Map(){
                 <div className="box">
                     <h1>{`Model ${selected[0]}`}</h1>
                     <p>{`Seen on ${selected[4]}`}</p>
-                    <p>{`At : ${selected[3].slice(0, 10)}`}</p>
+                    <p>{selected[3].slice(0, 10)}</p>
                 </div>
             </InfoWindow> 
             :null}

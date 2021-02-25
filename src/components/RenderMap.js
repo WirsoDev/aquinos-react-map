@@ -1,14 +1,12 @@
 import { React, useEffect, useState } from "react";
 import WrappedMap from './Maps'
+import Nav from './Nav'
 import env from "react-dotenv"
 import '../styles/load.css'
 import '../styles/map.css'
-import worldIcon from '../icons/World.svg'
-
 
 
 function RenderMap() {
-
     const [loading, setLoading] = useState(false)
 
     useEffect(()=>{
@@ -23,13 +21,7 @@ function RenderMap() {
     if(loading){
         return(
             <div className="map">
-                <div className="header">
-                    <h1 className="header-title">MIA<span>2021</span></h1>
-                    <p>Products around the world!</p>
-                    <h2>Total viewers <span>2</span></h2>
-                    <h2>AR available <span>2</span></h2>
-                    <img src={worldIcon} alt="world"/>
-                </div>
+                <Nav />
                 <WrappedMap 
                 googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${env.API_KEY}`}
                 loadingElement={<div style={{ height: '100%' }} />}
