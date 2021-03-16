@@ -15,7 +15,7 @@
 
     border-radius: 50%;
     border: 8px solid #ffffff;
-    border-top-color: #e74c3c;
+    border-top-color: #cccccc;
 
     margin-bottom: 30px;
 
@@ -26,14 +26,14 @@
 @keyframes spin{
     1%{
         transform: rotate(0deg);
-        border-top-color: #e74c3c;
+        border-top-color: #cccccc;
     }
     50%{
-        border-top-color: #64d35a;
+        border-top-color: #222222;
     }
     100%{
         transform: rotate(360deg);
-        border-top-color: #e74c3c;
+        border-top-color: #cccccc;
     }
 }
 

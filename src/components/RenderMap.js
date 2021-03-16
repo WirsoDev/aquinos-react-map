@@ -12,7 +12,7 @@ function RenderMap() {
     useEffect(()=>{
         const timer = setTimeout(()=>{
             setLoading(true)
-        }, 4000)
+        }, 3000)
         return(()=>{
             clearTimeout(timer)
         })
@@ -34,7 +34,6 @@ function RenderMap() {
         return(
             <div className="onload">
                 <span></span>
-                <h1>loading data</h1>
             </div>
         )
     }

@@ -16,6 +16,7 @@
 
     display: flex;
     flex-direction: column;
+    backdrop-filter:  blur(0.2rem)
 }
 
 
@@ -55,13 +56,13 @@
     margin-top: 20px;
     text-align: center;
     color: rgb(0, 0, 0);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .header img{
     height: 40px;
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
     
 }
